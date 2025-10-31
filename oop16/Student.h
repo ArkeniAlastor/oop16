@@ -63,12 +63,12 @@ void Student::Init(string n, string s, int a, double Av, int y)
 
 }
 
-inline void Student::Input()
+void Student::Input()
 {
 
 }
 
-inline void Student::Print()
+void Student::Print()
 {
 	cout << "Name: " << name << "\t"
 		<< "Surname: " << surname << "\t"
@@ -104,27 +104,27 @@ void Student::SetYear(int y)
 	}
 }
 
-inline string Student::GetName()
+string Student::GetName()
 {
 	return string();
 }
 
-inline string Student::GetSurname()
+string Student::GetSurname()
 {
 	return string();
 }
 
-inline int Student::GetAge()
+int Student::GetAge()
 {
 	return 0;
 }
 
-inline double Student::GetAverage()
+double Student::GetAverage()
 {
 	return 0.0;
 }
 
-inline int Student::GetYear()
+int Student::GetYear()
 {
 	return 0;
 }
