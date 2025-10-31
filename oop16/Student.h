@@ -19,6 +19,12 @@ public:
 	void SetAge(int a);
 	void SetArevage(double Av);
 	void SetYear(int y);
+	string GetName();
+	string GetSurname();
+	int GetAge();
+	double GetAverage();
+	int GetYear();
+
 };
 
 Student::Student() {
@@ -51,6 +57,13 @@ Student::Student(string n, string s, int a, double Av, int y)
 }
 
 void Student::Init(string n, string s, int a, double Av, int y)
+{
+	name = n;
+	surname = s;
+
+}
+
+inline void Student::Input()
 {
 
 }
@@ -89,4 +102,29 @@ void Student::SetYear(int y)
 	{
 		throw "Year Error\t";
 	}
+}
+
+inline string Student::GetName()
+{
+	return string();
+}
+
+inline string Student::GetSurname()
+{
+	return string();
+}
+
+inline int Student::GetAge()
+{
+	return 0;
+}
+
+inline double Student::GetAverage()
+{
+	return 0.0;
+}
+
+inline int Student::GetYear()
+{
+	return 0;
 }
