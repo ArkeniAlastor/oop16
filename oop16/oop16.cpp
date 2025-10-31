@@ -6,7 +6,9 @@ int main()
 {
 	try
 	{
-		Student obj("Ivan", "Petrov", 19, 11, 2);
+		Student obj("Alastor", "Arken", 19, 11, 2);
+		obj.SetAge(34);
+
 		obj.Print();
 	}
 	catch (const char * str)

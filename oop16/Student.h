@@ -13,7 +13,12 @@ class Student
 public:
 	Student();
 	Student(string n, string s, int a, double Av, int y);
+	void Init(string n, string s, int a, double Av, int y);
+	void Input();
 	void Print();
+	void SetAge(int a);
+	void SetArevage(double Av);
+	void SetYear(int y);
 };
 
 Student::Student() {
@@ -32,7 +37,7 @@ Student::Student(string n, string s, int a, double Av, int y)
 	}
 	age = a;
 
-	if (Av < 0)
+	if (Av < 0 || Av > 12)
 	{
 		throw "Average exeption!!!";
 	}
@@ -45,6 +50,11 @@ Student::Student(string n, string s, int a, double Av, int y)
 	year = y;
 }
 
+void Student::Init(string n, string s, int a, double Av, int y)
+{
+
+}
+
 inline void Student::Print()
 {
 	cout << "Name: " << name << "\t"
@@ -52,4 +62,31 @@ inline void Student::Print()
 		<< "Age: " << age << "\t"
 		<< "Average: " << Average << "\t"
 		<< "Year: " << year << endl << endl;
+}
+
+void Student::SetAge(int a)
+{
+	age = a;
+	if (a < 17 || a>65)
+	{
+		throw "Age Error\t";
+	}
+}
+
+void Student::SetArevage(double Av)
+{
+	Average = Av;
+	if (Av < 0 || Av > 12)
+	{
+		throw "Average Error";
+	}
+}
+
+void Student::SetYear(int y)
+{
+	year = y;
+	if (y < 1 || y>5)
+	{
+		throw "Year Error\t";
+	}
 }
