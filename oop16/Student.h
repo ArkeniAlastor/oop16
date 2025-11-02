@@ -61,11 +61,53 @@ void Student::Init(string n, string s, int a, double Av, int y)
 	name = n;
 	surname = s;
 
+	if (a < 17 || a > 65)
+	{
+		throw "Age exception!!!";
+	}
+	age = a;
+
+	if (Av < 0 || Av > 12)
+	{
+		throw "Average exception!!!";
+	}
+	Average = Av;
+
+	if (y < 1 || y > 5)
+	{
+		throw "Year exception!!!";
+	}
+	year = y;
 }
 
 void Student::Input()
 {
+	cout << "Enter name: ";
+	cin >> name;
 
+	cout << "Enter surname: ";
+	cin >> surname;
+
+	cout << "Enter age: ";
+	cin >> age;
+	if (age < 17 || age > 65)
+	{
+		throw "Age exception!!!";
+	}
+
+	cout << "Enter average: ";
+	cin >> Average;
+	if (Average < 0 || Average > 12)
+	{
+		throw "Average exception!!!";
+	}
+
+	cout << "Enter year: ";
+	cin >> year;
+	if (year < 1 || year > 5)
+	{
+		throw "Year exception!!!";
+	}
 }
 
 void Student::Print()
